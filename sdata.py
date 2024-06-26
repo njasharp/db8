@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
 # Set page config
 st.set_page_config(page_title="Gaming Trends Dashboard", layout="wide")
 hide_menu_style = """
@@ -17,6 +16,10 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 # Load the data from CSV
 data = pd.read_csv('new_data.csv')
 new_data = pd.read_csv('new_data2.csv')
+
+# Remove columns with "Unnamed" in their names and drop rows with all None values
+new_data = new_data.loc[:, ~new_data.columns.str.contains('^Unnamed')]
+new_data = new_data.dropna(how='all')
 
 # Function to display top 5 items as a list
 def display_top_5(data_list, title):
