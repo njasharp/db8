@@ -46,7 +46,7 @@ def plot_top_5(data_list, title):
         st.pyplot(fig)
 
 # Sidebar options
-st.sidebar.title("Gaming Trends - Options")
+st.sidebar.title("MENA Trends - Options")
 selected_country = st.sidebar.selectbox("Select Country", data['Country'].unique())
 selected_chart = st.sidebar.radio("Select Chart Type", ["Top Platforms","Mobile vs PC vs Console"])
 
@@ -110,4 +110,4 @@ with col2:
 st.write(data)
 st.write(new_data)
 st.image("nod1.PNG")
-st.info("dw-v1.2")
+st.info("dw-v1.2 6-26")
