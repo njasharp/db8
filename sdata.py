@@ -106,8 +106,14 @@ with col2:
     display_top_5(publishers_data, f"Top Publishers - {selected_country}")
     plot_top_5(publishers_data, f"Top Publishers - {selected_country}")
 
-# Display footer
-st.write(data)
-st.write(new_data)
+
+# Display raw data
+if st.sidebar.checkbox("Show Raw Data filtered", value=True):
+    st.subheader("Raw Data")
+    st.write(data)
+
+if st.sidebar.checkbox("Show Raw Data more ", value=True):
+    st.subheader("Raw Data more")
+    st.write(new_data)
 st.image("nod1.PNG")
 st.info("dw-v1.2 6-26")
