@@ -109,5 +109,5 @@ with col2:
 # Display footer
 st.write(data)
 st.write(new_data)
-st.image("nod1.png")
+st.image("nod1.PNG")
 st.info("dw-v1.2")
